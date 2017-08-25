@@ -10,6 +10,8 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
+  this.route('games');
+  this.route('game', { path: '/games/:game_id' });
 });
 
 export default Router;
