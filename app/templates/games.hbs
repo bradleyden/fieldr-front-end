@@ -4,8 +4,6 @@
 
 <ul>
 {{#each model as |game|}}
-{{#link-to 'game' game}}
-  <li>{{game.date}} {{game.away}}</li>
-  {{/link-to}}
+  {{game-list-item deleteGame='deleteGame' game=game}}
 {{/each}}
 </ul>

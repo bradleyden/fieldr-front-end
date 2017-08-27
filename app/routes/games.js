@@ -11,6 +11,9 @@ export default Ember.Route.extend({
       console.log(game)
       let newGame = this.get('store').createRecord('game', game)
       newGame.save()
+    },
+    deleteGame(game) {
+      game.destroyRecord()
     }
   }
 });
