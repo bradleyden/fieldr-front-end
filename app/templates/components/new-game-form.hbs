@@ -1,0 +1,7 @@
+<h3>Create a new game</h3>
+<form {{action 'createGame' on='submit'}} >
+  {{input type='date' placeholder='Game Date' value=newGame.date}}
+  {{input placeholder='Home Team' value=newGame.home}}
+  {{input placeholder='Away Team' value=newGame.away}}
+  <button type='submit'>Save</button>
+</form>

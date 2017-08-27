@@ -1,9 +1,11 @@
 <h2>Games</h2>
 
+{{new-game-form createGame="createGame"}}
+
 <ul>
 {{#each model as |game|}}
 {{#link-to 'game' game}}
-  <li>{{game.date}}</li>
+  <li>{{game.date}} {{game.away}}</li>
   {{/link-to}}
 {{/each}}
 </ul>
