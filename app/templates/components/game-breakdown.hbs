@@ -1,9 +1,15 @@
-<h4>Plate Appearances:</h4>
+{{create-plateappearance-form
+  game=game
+  createPlateappearance='createPlateappearance'
+}}
 
-{{create-plateappearance-form game=game createPlateappearance='createPlateappearance'}}
+<h4>Plate Appearances:</h4>
 
 <ul>
   {{#each game.plateappearances as |plateappearance|}}
-    {{plateappearance-box plateappearance=plateappearance}}
+    {{plateappearance-box
+      plateappearance=plateappearance
+      deletePlateappearance='deletePlateappearance'
+  }}
   {{/each}}
 </ul>
