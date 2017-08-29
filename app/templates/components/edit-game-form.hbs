@@ -1,0 +1,7 @@
+<h3>Edit game information</h3>
+<form {{action 'updateGame' on='submit'}} >
+  {{input type='date' placeholder='Game Date' value=game.date}}
+  {{input placeholder='Home Team' value=game.home}}
+  {{input placeholder='Away Team' value=game.away}}
+  <button type='submit'>Save</button>
+</form>
