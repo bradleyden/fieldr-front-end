@@ -1,0 +1,18 @@
+<h3>Create a new PA</h3>
+<form {{action 'createPlateappearance' on='submit'}} >
+  Inning:
+  {{input type='number' placeholder='Inning' value=newPlateappearance.inning}}
+  Batter:
+  {{input type='number' placeholder='Batter' value=newPlateappearance.batter}}
+  Pitcher:
+  {{input type='number' placeholder='Pitcher' value=newPlateappearance.pitcher}}
+  Outcome:
+  {{input placeholder='outcome' value=newPlateappearance.outcome}}
+  Runs:
+  {{input type='number' placeholder='Runs' value=newPlateappearance.runs}}
+  Errors:
+  {{input type='number' placeholder='Errors' value=newPlateappearance.def_error}}
+  Outs:
+  {{input type='number' placeholder='Outs' value=newPlateappearance.outs}}
+  <button type='submit'>Save</button>
+</form>
