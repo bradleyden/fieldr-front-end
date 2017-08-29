@@ -1,0 +1,18 @@
+<h3>Edit Plate Appearance</h3>
+<form {{action 'editPlateappearance' on='submit'}} >
+  Inning:
+  {{input type='number' placeholder='Inning' value=plateappearance.inning}}
+  Batter:
+  {{input type='number' placeholder='Batter' value=plateappearance.batter}}
+  Pitcher:
+  {{input type='number' placeholder='Pitcher' value=plateappearance.pitcher}}
+  Outcome:
+  {{input placeholder='outcome' value=plateappearance.outcome}}
+  Runs:
+  {{input type='number' placeholder='Runs' value=plateappearance.runs}}
+  Errors:
+  {{input type='number' placeholder='Errors' value=plateappearance.def_error}}
+  Outs:
+  {{input type='number' placeholder='Outs' value=plateappearance.outs}}
+  <button type='submit'>Save</button>
+</form>
