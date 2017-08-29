@@ -8,6 +8,9 @@ export default Ember.Route.extend({
     createPlateappearance(plateappearance) {
       let newPlateappearance = this.get('store').createRecord('plateappearance', plateappearance)
       newPlateappearance.save()
+    },
+    deletePlateappearance (plateappearance) {
+      plateappearance.destroyRecord()
     }
   }
 });

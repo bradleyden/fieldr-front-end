@@ -1,1 +1,7 @@
-{{outlet}}
+<h3 class="game-header">{{game.date}}</h3>
+
+<ul>
+  {{#each game.plateappearances as |plateappearance|}}
+    {{plateappearance.outcome}}
+  {{/each}}
+</ul>
