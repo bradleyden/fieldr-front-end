@@ -1,0 +1,30 @@
+<form {{action 'editPlateappearance' on='submit'}} >
+  <select onchange={{action 'selectInningHalf' value="target.value"}}>
+    <option value={{plateappearance.inninghalf}}>{{plateappearance.inninghalf}}</option>
+    {{#if (noeq plateappearance.inninghalf "TOP")}}
+    <option value='TOP'>TOP</option>
+    {{/if}}
+    {{#if (noeq plateappearance.inninghalf "BOT")}}
+    <option value='BOT'>BOT</option>
+    {{/if}}
+  </select><br>
+  {{input type='number' placeholder='Inning' value=plateappearance.inning}}<br>
+  {{input type='number' placeholder='Batter' value=plateappearance.batter}}
+  {{input type='number' placeholder='Pitcher' value=plateappearance.pitcher}}
+  <select onchange={{action 'selectOutcome' value="target.value"}}>
+    <option value={{plateappearance.outcome}}>{{plateappearance.outcome}}</option>
+    {{#if (noeq plateappearance.outcome "No AB")}}
+    <option value='No AB'>No AB</option>
+    {{/if}}
+    {{#if (noeq plateappearance.outcome "Hit")}}
+    <option value='Hit'>Hit</option>
+    {{/if}}
+    {{#if (noeq plateappearance.outcome "Out")}}
+    <option value='Out'>Out</option>
+    {{/if}}
+  </select><br>
+  {{input type='number' placeholder='Runs' value=plateappearance.runs}}
+  {{input type='number' placeholder='Errors' value=plateappearance.def_error}}
+  {{input type='number' placeholder='Outs' value=plateappearance.outs}}<br>
+  <button type='submit'>Save</button>
+</form>

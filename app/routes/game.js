@@ -6,6 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     createPlateappearance(plateappearance) {
+      console.log(plateappearance)
       let newPlateappearance = this.get('store').createRecord('plateappearance', plateappearance)
       newPlateappearance.save()
     },

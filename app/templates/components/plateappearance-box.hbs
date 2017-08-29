@@ -1,2 +1,6 @@
-#{{plateappearance.batter}} - {{plateappearance.outcome}}
-<button {{action 'deletePlateappearance'}}>Delete</button>
+<button {{action 'deletePlateappearance'}}>X</button>
+{{#link-to 'plateappearance-edit' plateappearance.game.id plateappearance.id}}
+  {{plateappearance.inninghalf}} {{plateappearance.inning}} / #{{plateappearance.batter}} = {{plateappearance.outcome}}
+{{/link-to}}
+
+{{outlet}}

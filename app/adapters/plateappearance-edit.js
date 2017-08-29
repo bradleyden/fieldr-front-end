@@ -1,12 +1,13 @@
 import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
-  createRecord(store, type, record) {
+  save(store, type, record) {
     const api = this.get('host')
     const serialized = this.serialize(record, {includeID: true})
     const gameId = serialized.game_id
-    const url = `${api}/games/${gameId}/plateappearances`
+    const plateappearanceId = serialized.id
+    const url = `${api}/games/${gameId}/plateappearances/${plateappearanceId}`
     const data = {plateappearance: serialized}
-    return this.ajax(url, 'POST', {data})
+    return this.ajax(url, 'PUT', {data})
   }
 });
