@@ -1,2 +1,7 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+.ember-text-field {
+  width: 100px;
+  display: inline;
+}

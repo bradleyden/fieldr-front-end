@@ -1,9 +1,16 @@
-<h3>Create a new PA</h3>
 <form {{action 'createPlateappearance' on='submit'}} >
+  <select onchange={{action 'selectInningHalf' value="target.value"}}>
+    <option value='TOP'>TOP</option>
+    <option value='BOT'>BOT</option>
+  </select><br>
   {{input type='number' placeholder='Inning' value=newPlateappearance.inning}}
   {{input type='number' placeholder='Batter' value=newPlateappearance.batter}}
   {{input type='number' placeholder='Pitcher' value=newPlateappearance.pitcher}}
-  {{input placeholder='Outcome' value=newPlateappearance.outcome}}
+  <select onchange={{action 'selectOutcome' value="target.value"}}>
+    <option value='No AB'>No AB</option>
+    <option value='Hit'>Hit</option>
+    <option value='Out'>Out</option>
+  </select>
   {{input type='number' placeholder='Runs' value=newPlateappearance.runs}}
   {{input type='number' placeholder='Errors' value=newPlateappearance.def_error}}
   {{input type='number' placeholder='Outs' value=newPlateappearance.outs}}

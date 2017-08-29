@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  inninghalf: DS.attr('string'),
   inning: DS.attr('number'),
   batter: DS.attr('number'),
   pitcher: DS.attr('number'),
