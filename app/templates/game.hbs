@@ -1,4 +1,6 @@
 <h2>{{model.away}} @ {{model.home}}</h2>
 <h2>{{model.date}}</h2>
 
+{{game-breakdown game=model createPlateappearance='createPlateappearance'}}
+
 {{#link-to 'games'}}Go Back{{/link-to}}
