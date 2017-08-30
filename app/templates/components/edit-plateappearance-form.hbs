@@ -1,5 +1,5 @@
 <form {{action 'editPlateappearance' on='submit'}} >
-  <select onchange={{action 'selectInningHalf' value="target.value"}}>
+  At the <select class='btn' onchange={{action 'selectInningHalf' value="target.value"}}>
     <option value={{plateappearance.inninghalf}}>{{plateappearance.inninghalf}}</option>
     {{#if (noeq plateappearance.inninghalf "TOP")}}
     <option value='TOP'>TOP</option>
@@ -7,11 +7,15 @@
     {{#if (noeq plateappearance.inninghalf "BOT")}}
     <option value='BOT'>BOT</option>
     {{/if}}
-  </select><br>
-  {{input type='number' placeholder='Inning' value=plateappearance.inning}}<br>
-  {{input type='number' placeholder='Batter' value=plateappearance.batter}}
-  {{input type='number' placeholder='Pitcher' value=plateappearance.pitcher}}
-  <select onchange={{action 'selectOutcome' value="target.value"}}>
+  </select> of inning
+  {{input class='pa-desc-input' type='number' placeholder='Inning' value=plateappearance.inning required='true' min='1' max='20'}},
+
+  <span class='form-label'>batter number</span>
+  {{input class='pa-desc-input' type='number' placeholder='Batter' value=plateappearance.batter required='true' min='0' max='99'}}
+  <span class='pa-desc-input' class='form-label'>stepped up against pitcher number</span>
+  {{input class='pa-desc-input' type='number' placeholder='Pitcher' value=plateappearance.pitcher required='true' min='0' max='99'}}
+  <span class='form-label'>resulting in a</span>
+  <select class='btn' onchange={{action 'selectOutcome' value="target.value"}}>
     <option value={{plateappearance.outcome}}>{{plateappearance.outcome}}</option>
     {{#if (noeq plateappearance.outcome "No AB")}}
     <option value='No AB'>No AB</option>
@@ -23,8 +27,11 @@
     <option value='Out'>Out</option>
     {{/if}}
   </select><br>
-  {{input type='number' placeholder='Runs' value=plateappearance.runs}}
-  {{input type='number' placeholder='Errors' value=plateappearance.def_error}}
-  {{input type='number' placeholder='Outs' value=plateappearance.outs}}<br>
-  <button type='submit'>Save</button>
+  {{input class='pa-desc-input' type='number' placeholder='Runs' value=plateappearance.runs required='true' min='0' max='4'}}
+  <span class='form-label'>runs were scored,</span>
+  {{input class='pa-desc-input' type='number' placeholder='Errors' value=plateappearance.def_error required='true' min='0' max='99'}}
+  <span class='form-label'>errors were made, and</span>
+  {{input class='pa-desc-input' type='number' placeholder='Outs' value=plateappearance.outs required='true' min='0' max='3'}}
+  <span class='form-label'>outs were recorded.</span><br>
+  <button class='btn' type='submit'>Save</button>
 </form>

@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   newPlateappearance: {
     inninghalf: 'TOP',
-    inning: null,
+    inning: 1,
     batter: null,
     pitcher: null,
     outcome: 'No AB',
@@ -21,6 +21,11 @@ export default Ember.Component.extend({
     },
     createPlateappearance() {
       this.sendAction('createPlateappearance', this.get('newPlateappearance'))
+      this.set('newPlateappearance.batter', null)
+      this.set('newPlateappearance.outcome', 'No AB')
+      this.set('newPlateappearance.runs', 0)
+      this.set('newPlateappearance.outs', 0)
+      this.set('newPlateappearance.def_error', 0)
     }
   }
 });

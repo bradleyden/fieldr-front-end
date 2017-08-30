@@ -1,5 +1,5 @@
-{{#link-to 'game' game}}
-  <li>{{game.date}} {{game.away}} @ {{game.home}}</li>
+{{#link-to 'game' game.id}}
+  <h2>{{game.date}} {{game.away}} @ {{game.home}}</h2>
 {{/link-to}}
 
 <button {{action 'deleteGame'}}>Delete Game</button>
