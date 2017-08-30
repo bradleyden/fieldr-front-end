@@ -1,17 +1,18 @@
 /* jshint node: true */
 
-module.exports = function (environment) {
-  'use strict';
-  const ENV = {
-    modulePrefix: 'fieldr-front-end',
+module.exports = function(environment) {
+  var ENV = {
+    modulePrefix: '<% NAME OF YOUR CLIENT will be here %>',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      },
+      }
+    },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
         Date: false,
@@ -49,8 +50,10 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
-  }
+  ENV.rootURL = '/fieldr-front-end';
+  ENV.locationType = 'hash';
+  ENV.apiHost = 'https://serene-hollows-15808.herokuapp.com/';
+}
 
   return ENV;
 };
