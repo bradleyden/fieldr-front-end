@@ -1,5 +1,5 @@
 
-import { and } from 'fieldr-front-end/helpers/and';
+import { and } from 'ga-wdi-boston.ember-auth/helpers/and';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | and');

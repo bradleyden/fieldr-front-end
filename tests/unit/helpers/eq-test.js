@@ -1,5 +1,5 @@
 
-import { eq } from 'fieldr-front-end/helpers/eq';
+import { eq } from 'ga-wdi-boston.ember-auth/helpers/eq';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | eq');

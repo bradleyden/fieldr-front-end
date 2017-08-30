@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'fieldr-front-end',
+    modulePrefix: 'ga-wdi-boston.ember-auth',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
