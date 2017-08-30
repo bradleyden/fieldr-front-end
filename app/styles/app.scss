@@ -5,3 +5,83 @@
   width: 100px;
   display: inline;
 }
+
+.longer-field {
+  width: 300px;
+  display: inline;
+}
+
+table {
+  width: 90%;
+  border: 2px solid #59635a;
+}
+
+th,
+tr {
+  text-align: center;
+  border: 2px solid #59635a;
+  padding: 15px;
+}
+
+.RHE {
+  background-color: #fcf5c4;
+}
+
+.boxscore-header {
+  color: #FFFFFF;
+  background-color: #59635a;
+}
+
+.pabox {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  display:inline-block;
+}
+
+.pabox a:link,
+.pabox a:visited {
+  color: black;
+}
+
+.btn {
+  border: none;
+}
+
+.delete-pa {
+  border-radius: 7px;
+  position: relative;
+  bottom: -30px;
+  font-size: 9px;
+  width: 100%;
+  height: auto;
+}
+
+.plateappearance-table {
+  height: 102px;
+  text-align: left;
+}
+
+.inning-column {
+  color: #FFFFFF;
+  background-color: #59635a;
+  width: 50px;
+}
+
+.score {
+  border-radius: 9px;
+  border: 2px solid black;
+}
+
+.runs {
+  background-color: #e8ffdd;
+}
+
+.outs {
+  border: 2px solid red;
+}
+
+.pa-desc-input {
+  width: 70px;
+  margin: 10px;
+}

@@ -2,11 +2,257 @@
 
 <h4>Plate Appearances:</h4>
 
-<ul>
-  {{#each game.plateappearances as |plateappearance|}}
-    {{plateappearance-box
-      plateappearance=plateappearance
-      deletePlateappearance='deletePlateappearance'
-  }}
-  {{/each}}
-</ul>
+<table>
+  <tr>
+    <th class='inning-column'>▲1</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 1)(eq plateappearance.inninghalf 'TOP'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>1▼</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 1)(eq plateappearance.inninghalf 'BOT'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>▲2</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 2)(eq plateappearance.inninghalf 'TOP'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>2▼</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 2)(eq plateappearance.inninghalf 'BOT'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>▲3</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 3)(eq plateappearance.inninghalf 'TOP'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>3▼</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 3)(eq plateappearance.inninghalf 'BOT'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>▲4</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 4)(eq plateappearance.inninghalf 'TOP'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>4▼</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 4)(eq plateappearance.inninghalf 'BOT'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>▲5</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 5)(eq plateappearance.inninghalf 'TOP'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+  <tr>
+    <th class='inning-column'>5▼</th>
+    <th class='plateappearance-table'>
+      {{#each game.plateappearances as |plateappearance|}}
+      {{#if (and (eq plateappearance.inning 5)(eq plateappearance.inninghalf 'BOT'))}}
+        <div class='pabox'>
+        {{plateappearance-box
+          plateappearance=plateappearance
+          deletePlateappearance='deletePlateappearance'}}
+        </div>
+        {{/if}}
+      {{/each}}
+    </th>
+  </tr>
+<tr>
+  <th class='inning-column'>▲6</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 6)(eq plateappearance.inninghalf 'TOP'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+<tr>
+  <th class='inning-column'>6▼</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 6)(eq plateappearance.inninghalf 'BOT'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+<tr>
+  <th class='inning-column'>▲7</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 7)(eq plateappearance.inninghalf 'TOP'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+<tr>
+  <th class='inning-column'>7▼</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 7)(eq plateappearance.inninghalf 'BOT'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+<tr>
+  <th class='inning-column'>▲8</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 8)(eq plateappearance.inninghalf 'TOP'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+<tr>
+  <th class='inning-column'>8▼</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 8)(eq plateappearance.inninghalf 'BOT'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+<tr>
+  <th class='inning-column'>▲9</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 9)(eq plateappearance.inninghalf 'TOP'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+<tr>
+  <th class='inning-column'>9▼</th>
+  <th class='plateappearance-table'>
+    {{#each game.plateappearances as |plateappearance|}}
+    {{#if (and (eq plateappearance.inning 9)(eq plateappearance.inninghalf 'BOT'))}}
+      <div class='pabox'>
+      {{plateappearance-box
+        plateappearance=plateappearance
+        deletePlateappearance='deletePlateappearance'}}
+      </div>
+      {{/if}}
+    {{/each}}
+  </th>
+</tr>
+</table>

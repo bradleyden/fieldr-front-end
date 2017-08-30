@@ -1,6 +1,8 @@
-<button {{action 'deletePlateappearance'}}>X</button>
+<div class="score {{if plateappearance.runs 'runs'}}" class="{{if plateappearance.outs 'outs'}}">
 {{#link-to 'plateappearance-edit' plateappearance.game.id plateappearance.id}}
-  {{plateappearance.inninghalf}} {{plateappearance.inning}} / #{{plateappearance.batter}} = {{plateappearance.outcome}}
-{{/link-to}}
+  #{{plateappearance.batter}}
+{{/link-to}}<br>
+<button class='btn delete-pa' {{action 'deletePlateappearance'}}>X</button>
+</div>
 
 {{outlet}}

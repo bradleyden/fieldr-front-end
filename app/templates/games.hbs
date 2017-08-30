@@ -2,8 +2,6 @@
 
 {{new-game-form createGame="createGame"}}
 
-<ul>
 {{#each model as |game|}}
   {{game-list-item deleteGame='deleteGame' game=game}}
 {{/each}}
-</ul>
