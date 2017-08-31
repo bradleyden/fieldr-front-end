@@ -9,7 +9,22 @@ export default Ember.Component.extend({
     outcome: 'No AB',
     runs: 0,
     outs: 0,
-    def_error: 0
+    def_error: 0,
+    firstbase: false,
+    secondbase: false,
+    thirdbase: false,
+    homebase: false,
+    firstbasemandefense: false,
+    secondbasemandefense: false,
+    thirdbasemandefense: false,
+    shortstopdefense: false,
+    leftfielddefense: false,
+    centerfielddefense: false,
+    rightfielddefense: false,
+    shortstopdefense: false,
+    pitcherdefense: false,
+    catcherdefense: false,
+    homer: false
   },
   actions: {
     selectInningHalf(inninghalf) {

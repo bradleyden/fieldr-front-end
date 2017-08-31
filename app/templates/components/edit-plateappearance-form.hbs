@@ -34,5 +34,21 @@
   <span class='form-label'>errors made</span><br>
   {{input class='pa-input' type='number' placeholder='Outs' value=plateappearance.outs required='true' min='0' max='3'}}
   <span class='form-label'>outs recorded</span><br>
+  {{input type='hidden' class='pa-input' placeholder='1B' value=plateappearance.firstbase required='true'}}
+  {{input type='hidden' lass='pa-input' placeholder='2B' value=plateappearance.secondbase required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='3B' value=plateappearance.thirdbase required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='4B' value=plateappearance.homebase required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='1B' value=plateappearance.firstbasemandefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='2B' value=plateappearance.secondbasemandefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='3B' value=plateappearance.thirdbasemandefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='SS' value=plateappearance.shortstopdefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='LF' value=plateappearance.leftfielderdefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='RF' value=plateappearance.rightfielderdefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='CF' value=plateappearance.centerfielderdefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='P' value=plateappearance.pitcherdefense required='true'}}
+  {{input type='hidden' class='pa-input' placeholder='C' value=plateappearance.catcherdefense required='true'}}
+  <br>
   <button class='btn' type='submit'>Save</button>
 </form>
+
+{{field-controller plateappearance=plateappearance}}

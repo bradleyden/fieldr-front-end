@@ -1,6 +1,51 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+svg {
+  width: 600px;
+  height: auto;
+  filter: url(#shadow);
+  margin-top: -160px;
+  margin-bottom: 120px;
+  margin-left: 200px;
+}
+
+.player,
+.hr {
+  fill: #600707;
+}
+
+.hr:hover,
+.hr-true,
+.player:hover,
+.player-true {
+  fill: #dF4F4F;
+}
+
+.player-true {
+  stroke-width: 40px;
+  stroke: #dF4F4F;
+}
+
+.player:hover {
+  filter: url(#shadow);
+}
+
+.base {
+  stroke: #999999;
+  stroke-width: 2px;
+  fill: #FFFFFF;
+}
+
+.base:hover,
+.base-true {
+  fill: #ffc700;
+}
+
+.num {
+  pointer-events: none;
+}
+
 body {
   background-color: #F2F2F2;
 }
@@ -16,8 +61,8 @@ h1, h2, h3 {
 }
 
 .logo {
-  margin-top: -32px;
-  margin-left: -275px;
+  margin-top: -31px;
+  margin-left: -295px;
   height: 220px;
   width: auto;
 }
@@ -31,14 +76,14 @@ h1, h2, h3 {
 .alert {
   position: fix;
   top: 0;
-  margin-left: -30px;
+  margin-left: -100px;
 }
 
 .banner {
   z-index: 1;
   background-color: #273f33;
   height: 160px;
-  margin-left: 120px;
+  margin-left: 130px;
   border-radius: 0 0 30px 0;
 }
 
@@ -167,7 +212,7 @@ td {
   font-size: 14px;
   width: 50%;
   height: auto;
-  margin: 10px;
+  margin: 10px 10px 25px 10px;
   padding: 0;
 }
 
