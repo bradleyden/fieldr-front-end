@@ -1,6 +1,6 @@
-<h2>{{model.away}} @ {{model.home}}</h2>
-<h2>{{model.date}}</h2>
-{{#link-to 'games'}}Go Back{{/link-to}}
+<h1>{{model.away}} @ {{model.home}}</h1>
+<h3>{{model.date}}</h3>
+{{#link-to 'games'}}<button class='btn'><i class="fa fa-arrow-left" aria-hidden="true"></i></button>{{/link-to}}
 {{box-score game=model}}
 
 {{game-breakdown
@@ -8,4 +8,4 @@
   createPlateappearance='createPlateappearance'
   deletePlateappearance='deletePlateappearance'
 }}
-{{#link-to 'games'}}Go Back{{/link-to}}
+{{#link-to 'games'}}<button class='btn'><i class="fa fa-arrow-left" aria-hidden="true"></i></button>{{/link-to}}

@@ -1,8 +1,16 @@
-{{#link-to 'game' game.id}}
-  <h2>{{game.date}} {{game.away}} @ {{game.home}}</h2>
-{{/link-to}}
-
-<button {{action 'deleteGame'}}>Delete Game</button>
+<tr>
+  <td>
+  <h3>{{game.date}}</h3>
+</td>
+<td>
+  {{#link-to 'game' game.id}}
+  <h3>{{game.away}} @ {{game.home}}</h3>
+  {{/link-to}}
+</td>
+<td>
+<button class='btn' {{action 'deleteGame'}}><i class="fa fa-trash" aria-hidden="true"></i></button>
 {{#link-to 'edit-game' game}}
-  <button>Edit Game Info</button>
+  <button class='btn'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
 {{/link-to}}
+</td>
+</tr>

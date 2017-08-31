@@ -1,7 +1,24 @@
 <h2>Games</h2>
 
-{{new-game-form createGame="createGame"}}
+{{new-game-form createGame="createGame"}}<br>
 
-{{#each model as |game|}}
-  {{game-list-item deleteGame='deleteGame' game=game}}
-{{/each}}
+<table>
+  <thead>
+    <tr class='table-header'>
+      <th>
+        Date
+      </th>
+      <th>
+        Teams
+      </th>
+      <th>
+        Edit/Delete
+      </th>
+    </tr>
+  </thead>
+    <tbody>
+      {{#each model as |game|}}
+        {{game-list-item deleteGame='deleteGame' game=game}}
+      {{/each}}
+    </tbody>
+</table>
