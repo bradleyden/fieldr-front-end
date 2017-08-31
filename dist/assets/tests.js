@@ -60,7 +60,7 @@ define('fieldr-front-end/tests/components/create-plateappearance-form.jshint.lin
   QUnit.module('JSHint | components/create-plateappearance-form.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/create-plateappearance-form.js should pass jshint.\ncomponents/create-plateappearance-form.js: line 16, col 30, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 17, col 60, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 20, col 54, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 23, col 79, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 24, col 50, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 25, col 54, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 26, col 45, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 27, col 45, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 28, col 50, Missing semicolon.\n\n9 errors');
+    assert.ok(false, 'components/create-plateappearance-form.js should pass jshint.\ncomponents/create-plateappearance-form.js: line 24, col 21, Duplicate key \'shortstopdefense\'.\ncomponents/create-plateappearance-form.js: line 31, col 30, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 32, col 60, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 35, col 54, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 38, col 79, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 39, col 50, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 40, col 54, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 41, col 45, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 42, col 45, Missing semicolon.\ncomponents/create-plateappearance-form.js: line 43, col 50, Missing semicolon.\n\n10 errors');
   });
 });
 define('fieldr-front-end/tests/components/edit-game-form.jshint.lint-test', [], function () {
@@ -88,6 +88,15 @@ define('fieldr-front-end/tests/components/email-input.jshint.lint-test', [], fun
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'components/email-input.js should pass jshint.');
+  });
+});
+define('fieldr-front-end/tests/components/field-controller.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | components/field-controller.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'components/field-controller.js should pass jshint.\ncomponents/field-controller.js: line 6, col 55, Missing semicolon.\ncomponents/field-controller.js: line 9, col 56, Missing semicolon.\ncomponents/field-controller.js: line 12, col 55, Missing semicolon.\ncomponents/field-controller.js: line 15, col 54, Missing semicolon.\ncomponents/field-controller.js: line 18, col 60, Missing semicolon.\ncomponents/field-controller.js: line 21, col 60, Missing semicolon.\ncomponents/field-controller.js: line 24, col 65, Missing semicolon.\ncomponents/field-controller.js: line 27, col 66, Missing semicolon.\ncomponents/field-controller.js: line 30, col 65, Missing semicolon.\ncomponents/field-controller.js: line 33, col 62, Missing semicolon.\ncomponents/field-controller.js: line 36, col 64, Missing semicolon.\ncomponents/field-controller.js: line 39, col 66, Missing semicolon.\ncomponents/field-controller.js: line 42, col 65, Missing semicolon.\ncomponents/field-controller.js: line 45, col 51, Missing semicolon.\n\n14 errors');
   });
 });
 define('fieldr-front-end/tests/components/footer-info.jshint.lint-test', [], function () {
@@ -651,6 +660,44 @@ define('fieldr-front-end/tests/integration/components/email-input-test.jshint.li
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/email-input-test.js should pass jshint.');
+  });
+});
+define('fieldr-front-end/tests/integration/components/field-controller-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('field-controller', 'Integration | Component | field controller', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': 'kKFWo6od',
+      'block': '{"statements":[["append",["unknown",["field-controller"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': '5Gdukaje',
+      'block': '{"statements":[["text","\\n"],["block",["field-controller"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('fieldr-front-end/tests/integration/components/field-controller-test.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/field-controller-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/field-controller-test.js should pass jshint.');
   });
 });
 define('fieldr-front-end/tests/integration/components/footer-info-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -1269,7 +1316,7 @@ define('fieldr-front-end/tests/models/plateappearance.jshint.lint-test', [], fun
   QUnit.module('JSHint | models/plateappearance.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'models/plateappearance.js should pass jshint.');
+    assert.ok(false, 'models/plateappearance.js should pass jshint.\nmodels/plateappearance.js: line 23, col 19, Duplicate key \'shortstopdefense\'.\n\n1 error');
   });
 });
 define('fieldr-front-end/tests/models/user.jshint.lint-test', [], function () {
@@ -1332,7 +1379,7 @@ define('fieldr-front-end/tests/routes/game.jshint.lint-test', [], function () {
   QUnit.module('JSHint | routes/game.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/game.js should pass jshint.\nroutes/game.js: line 5, col 37, Missing semicolon.\nroutes/game.js: line 7, col 41, Missing semicolon.\nroutes/game.js: line 8, col 23, Missing semicolon.\nroutes/game.js: line 12, col 38, Missing semicolon.\nroutes/game.js: line 13, col 13, Missing semicolon.\nroutes/game.js: line 17, col 43, Missing semicolon.\nroutes/game.js: line 18, col 23, Missing semicolon.\nroutes/game.js: line 19, col 23, Missing semicolon.\nroutes/game.js: line 20, col 23, Missing semicolon.\nroutes/game.js: line 21, col 23, Missing semicolon.\nroutes/game.js: line 22, col 25, Missing semicolon.\nroutes/game.js: line 23, col 25, Missing semicolon.\nroutes/game.js: line 24, col 21, Missing semicolon.\nroutes/game.js: line 25, col 21, Missing semicolon.\nroutes/game.js: line 26, col 21, Missing semicolon.\nroutes/game.js: line 27, col 21, Missing semicolon.\nroutes/game.js: line 28, col 23, Missing semicolon.\nroutes/game.js: line 29, col 23, Missing semicolon.\nroutes/game.js: line 30, col 22, Missing semicolon.\nroutes/game.js: line 31, col 22, Missing semicolon.\nroutes/game.js: line 32, col 22, Missing semicolon.\nroutes/game.js: line 33, col 22, Missing semicolon.\nroutes/game.js: line 34, col 21, Missing semicolon.\nroutes/game.js: line 35, col 21, Missing semicolon.\nroutes/game.js: line 36, col 23, Missing semicolon.\nroutes/game.js: line 37, col 23, Missing semicolon.\nroutes/game.js: line 38, col 23, Missing semicolon.\nroutes/game.js: line 39, col 23, Missing semicolon.\nroutes/game.js: line 40, col 22, Missing semicolon.\nroutes/game.js: line 41, col 22, Missing semicolon.\nroutes/game.js: line 42, col 74, Missing semicolon.\nroutes/game.js: line 45, col 37, Missing semicolon.\nroutes/game.js: line 46, col 44, Missing semicolon.\nroutes/game.js: line 48, col 26, Missing semicolon.\nroutes/game.js: line 51, col 37, Missing semicolon.\nroutes/game.js: line 53, col 37, Missing semicolon.\nroutes/game.js: line 55, col 39, Missing semicolon.\nroutes/game.js: line 57, col 38, Missing semicolon.\nroutes/game.js: line 59, col 38, Missing semicolon.\nroutes/game.js: line 61, col 37, Missing semicolon.\nroutes/game.js: line 63, col 39, Missing semicolon.\nroutes/game.js: line 65, col 39, Missing semicolon.\nroutes/game.js: line 67, col 38, Missing semicolon.\nroutes/game.js: line 70, col 37, Missing semicolon.\nroutes/game.js: line 71, col 44, Missing semicolon.\nroutes/game.js: line 73, col 26, Missing semicolon.\nroutes/game.js: line 76, col 37, Missing semicolon.\nroutes/game.js: line 78, col 37, Missing semicolon.\nroutes/game.js: line 80, col 39, Missing semicolon.\nroutes/game.js: line 82, col 38, Missing semicolon.\nroutes/game.js: line 82, col 38, Too many errors. (59% scanned).\n\n51 errors');
+    assert.ok(false, 'routes/game.js should pass jshint.\nroutes/game.js: line 6, col 41, Missing semicolon.\nroutes/game.js: line 7, col 23, Missing semicolon.\nroutes/game.js: line 11, col 38, Missing semicolon.\nroutes/game.js: line 12, col 13, Missing semicolon.\nroutes/game.js: line 16, col 43, Missing semicolon.\nroutes/game.js: line 17, col 23, Missing semicolon.\nroutes/game.js: line 18, col 23, Missing semicolon.\nroutes/game.js: line 19, col 23, Missing semicolon.\nroutes/game.js: line 20, col 23, Missing semicolon.\nroutes/game.js: line 21, col 25, Missing semicolon.\nroutes/game.js: line 22, col 25, Missing semicolon.\nroutes/game.js: line 23, col 21, Missing semicolon.\nroutes/game.js: line 24, col 21, Missing semicolon.\nroutes/game.js: line 25, col 21, Missing semicolon.\nroutes/game.js: line 26, col 21, Missing semicolon.\nroutes/game.js: line 27, col 23, Missing semicolon.\nroutes/game.js: line 28, col 23, Missing semicolon.\nroutes/game.js: line 29, col 22, Missing semicolon.\nroutes/game.js: line 30, col 22, Missing semicolon.\nroutes/game.js: line 31, col 22, Missing semicolon.\nroutes/game.js: line 32, col 22, Missing semicolon.\nroutes/game.js: line 33, col 21, Missing semicolon.\nroutes/game.js: line 34, col 21, Missing semicolon.\nroutes/game.js: line 35, col 23, Missing semicolon.\nroutes/game.js: line 36, col 23, Missing semicolon.\nroutes/game.js: line 37, col 23, Missing semicolon.\nroutes/game.js: line 38, col 23, Missing semicolon.\nroutes/game.js: line 39, col 22, Missing semicolon.\nroutes/game.js: line 40, col 22, Missing semicolon.\nroutes/game.js: line 41, col 74, Missing semicolon.\nroutes/game.js: line 44, col 37, Missing semicolon.\nroutes/game.js: line 45, col 44, Missing semicolon.\nroutes/game.js: line 47, col 26, Missing semicolon.\nroutes/game.js: line 50, col 37, Missing semicolon.\nroutes/game.js: line 52, col 37, Missing semicolon.\nroutes/game.js: line 54, col 39, Missing semicolon.\nroutes/game.js: line 56, col 38, Missing semicolon.\nroutes/game.js: line 58, col 38, Missing semicolon.\nroutes/game.js: line 60, col 37, Missing semicolon.\nroutes/game.js: line 62, col 39, Missing semicolon.\nroutes/game.js: line 64, col 39, Missing semicolon.\nroutes/game.js: line 66, col 38, Missing semicolon.\nroutes/game.js: line 69, col 37, Missing semicolon.\nroutes/game.js: line 70, col 44, Missing semicolon.\nroutes/game.js: line 72, col 26, Missing semicolon.\nroutes/game.js: line 75, col 37, Missing semicolon.\nroutes/game.js: line 77, col 37, Missing semicolon.\nroutes/game.js: line 79, col 39, Missing semicolon.\nroutes/game.js: line 81, col 38, Missing semicolon.\nroutes/game.js: line 83, col 38, Missing semicolon.\nroutes/game.js: line 83, col 38, Too many errors. (60% scanned).\n\n51 errors');
   });
 });
 define('fieldr-front-end/tests/routes/games.jshint.lint-test', [], function () {
@@ -1454,6 +1501,15 @@ define('fieldr-front-end/tests/test-helper.jshint.lint-test', [], function () {
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass jshint.');
+  });
+});
+define('fieldr-front-end/tests/transforms/array.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | transforms/array.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'transforms/array.js should pass jshint.');
   });
 });
 define('fieldr-front-end/tests/unit/adapters/application-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -2021,6 +2077,28 @@ define('fieldr-front-end/tests/unit/services/auth-test.jshint.lint-test', [], fu
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/services/auth-test.js should pass jshint.');
+  });
+});
+define('fieldr-front-end/tests/unit/transforms/array-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('transform:array', 'Unit | Transform | array', {
+    // Specify the other units that are required for this test.
+    // needs: ['serializer:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var transform = this.subject();
+    assert.ok(transform);
+  });
+});
+define('fieldr-front-end/tests/unit/transforms/array-test.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | unit/transforms/array-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/transforms/array-test.js should pass jshint.');
   });
 });
 require('fieldr-front-end/tests/test-helper');

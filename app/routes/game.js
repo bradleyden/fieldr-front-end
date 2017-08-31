@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-    console.log('getting game info')
     const currentGame = this.get('store').findRecord('game', params.game_id);
     this.set('currentGame', currentGame)
     return currentGame
