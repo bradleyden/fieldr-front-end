@@ -6135,9 +6135,9 @@ svg {
   height: auto;
   -webkit-filter: url(#shadow);
           filter: url(#shadow);
-  margin-top: -160px;
+  margin-top: -170px;
   margin-bottom: 120px;
-  margin-left: 200px; }
+  margin-left: 300px; }
 
 .player,
 .hr {
@@ -6274,6 +6274,11 @@ td {
   display: inline;
   width: 60px;
   margin-right: 20px; }
+
+.pa-edit-input {
+  display: inline;
+  width: 60px;
+  margin: 5px; }
 
 .footer {
   margin-left: -20px;
