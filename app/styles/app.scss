@@ -17,7 +17,7 @@ h1, h2, h3 {
 
 .logo {
   margin-top: -32px;
-  margin-left: -235px;
+  margin-left: -275px;
   height: 220px;
   width: auto;
 }
@@ -29,14 +29,16 @@ h1, h2, h3 {
 }
 
 .alert {
-  margin-top: 50px;
+  position: fix;
+  top: 0;
+  margin-left: -30px;
 }
 
 .banner {
   z-index: 1;
   background-color: #273f33;
   height: 160px;
-  margin-left: 100px;
+  margin-left: 120px;
   border-radius: 0 0 30px 0;
 }
 
@@ -84,17 +86,6 @@ td {
   color: black;
 }
 
-.delete-pa {
-  background-color: #edb1af;
-  border-radius: 7px;
-  position: relative;
-  bottom: 0;
-  font-size: 8px;
-  width: 90%;
-  height: auto;
-  margin: 5px;
-}
-
 .plateappearance-cell {
   height: 123px;
   text-align: left;
@@ -116,7 +107,7 @@ td {
   width: 60px;
   height: 60px;
   padding: 10px;
-  border-radius: 9px;
+  border-radius: 40px;
   border: 2px solid black;
   box-shadow: 3px 3px #888888;
 }
@@ -139,6 +130,17 @@ td {
   margin-right: 20px;
 }
 
+.footer {
+  margin-left: -20px;
+  color: white;
+  width: 100%;
+  background-color: #273f33;
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  text-align: left;
+}
+
 .newPA {
   border-radius: 0 0 0 15px;
   position: fixed;
@@ -148,7 +150,7 @@ td {
   padding: 30px;
   color: white;
   background-color: #273f33;
-  z-index: 100;
+  z-index: 4;
 }
 
 .btn {
@@ -157,19 +159,43 @@ td {
   margin: 5px 0;
 }
 
+.delete-pa {
+  background-color: #edb1af;
+  border-radius: 7px;
+  position: relative;
+  bottom: 0;
+  font-size: 14px;
+  width: 50%;
+  height: auto;
+  margin: 10px;
+  padding: 0;
+}
+
+.go-up {
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 60px;
+  bottom: 20px;
+  z-index: 5;
+}
+
 .pa-select {
   margin-right: 20px;
 }
 
-.navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-nav > li > a:visited {
+.navbar .navbar-nav > li > a,
+.navbar .navbar-nav > li > a:visited {
+  background-color: #273f33;
   font-family: 'Oswald';
   margin-top: 105px;
   font-size: 22px;
   color: white;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+.navbar .navbar-nav > li > a:hover {
+  background-color: #273f33;
   color: #e0d0b2;
 }
 
