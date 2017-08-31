@@ -90,6 +90,15 @@ define('fieldr-front-end/tests/components/email-input.jshint.lint-test', [], fun
     assert.ok(true, 'components/email-input.js should pass jshint.');
   });
 });
+define('fieldr-front-end/tests/components/footer-info.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | components/footer-info.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/footer-info.js should pass jshint.');
+  });
+});
 define('fieldr-front-end/tests/components/game-breakdown.jshint.lint-test', [], function () {
   'use strict';
 
@@ -106,6 +115,15 @@ define('fieldr-front-end/tests/components/game-list-item.jshint.lint-test', [], 
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(false, 'components/game-list-item.js should pass jshint.\ncomponents/game-list-item.js: line 7, col 61, Missing semicolon.\n\n1 error');
+  });
+});
+define('fieldr-front-end/tests/components/go-up.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | components/go-up.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/go-up.js should pass jshint.');
   });
 });
 define('fieldr-front-end/tests/components/hamburger-menu.jshint.lint-test', [], function () {
@@ -635,6 +653,44 @@ define('fieldr-front-end/tests/integration/components/email-input-test.jshint.li
     assert.ok(true, 'integration/components/email-input-test.js should pass jshint.');
   });
 });
+define('fieldr-front-end/tests/integration/components/footer-info-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('footer-info', 'Integration | Component | footer info', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': '6tEW+ysK',
+      'block': '{"statements":[["append",["unknown",["footer-info"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': '2/e1niAB',
+      'block': '{"statements":[["text","\\n"],["block",["footer-info"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('fieldr-front-end/tests/integration/components/footer-info-test.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/footer-info-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/footer-info-test.js should pass jshint.');
+  });
+});
 define('fieldr-front-end/tests/integration/components/game-breakdown-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('game-breakdown', 'Integration | Component | game breakdown', {
@@ -709,6 +765,44 @@ define('fieldr-front-end/tests/integration/components/game-list-item-test.jshint
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/game-list-item-test.js should pass jshint.');
+  });
+});
+define('fieldr-front-end/tests/integration/components/go-up-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('go-up', 'Integration | Component | go up', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': 'xCdJJLLN',
+      'block': '{"statements":[["append",["unknown",["go-up"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': 'fR2PtZvM',
+      'block': '{"statements":[["text","\\n"],["block",["go-up"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('fieldr-front-end/tests/integration/components/go-up-test.jshint.lint-test', [], function () {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/go-up-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/go-up-test.js should pass jshint.');
   });
 });
 define('fieldr-front-end/tests/integration/components/hamburger-menu-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

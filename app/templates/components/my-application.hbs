@@ -1,4 +1,4 @@
-<nav class="banner navbar navbar-default">
+<nav class="banner navbar">
   <div class="banner container-fluid">
     {{navbar-header}}
 
@@ -17,6 +17,9 @@
         <li class='nav-link'>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
         {{/if}}
       </ul>
+      {{#each flashMessages.queue as |flash|}}
+        {{flash-message flash=flash}}
+      {{/each}}
     </div>
   </div>
 </nav>
@@ -26,10 +29,6 @@
 {{else}}
 {{jumbo-page}}
 {{/if}}
-
-{{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
-{{/each}}
 
 <div class="col-md-8 col-md-offset-2">
   {{outlet}}
