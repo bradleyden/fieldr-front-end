@@ -1,7 +1,12 @@
 <form class='newPA' {{action 'createPlateappearance' on='submit'}}>
-  <select class='btn' onchange={{action 'selectInningHalf' value="target.value"}}>
+  <select class='btn' onchange={{action 'selectInningHalfCreate' value="target.value"}}>
+    <option selected value={{newPlateappearance.inninghalf}}>{{newPlateappearance.inninghalf}}</option>
+    {{#if (noeq newPlateappearance.inninghalf "TOP")}}
     <option value='TOP'>TOP</option>
+    {{/if}}
+    {{#if (noeq newPlateappearance.inninghalf "BOT")}}
     <option value='BOT'>BOT</option>
+    {{/if}}
   </select><br>
   {{input class='pa-input' type='number' value=newPlateappearance.inning required='true' min='1' max='20'}}
   <span class='form-label'>Batter:</span>
@@ -9,10 +14,17 @@
   <span class='form-label'>Pitcher:</span>
   {{input class='pa-input' type='number' value=newPlateappearance.pitcher required='true' min='0' max='99'}}
   <span class='form-label'>Batter Result:</span>
-  <select class='pa-select btn' onchange={{action 'selectOutcome' value="target.value"}}>
+  <select class='pa-select btn' onchange={{action 'selectOutcomeCreate' value="target.value"}}>
+    <option selected value={{newPlateappearance.outcome}}>{{newPlateappearance.outcome}}</option>
+    {{#if (noeq newPlateappearance.outcome "No AB")}}
     <option value='No AB'>No AB</option>
+    {{/if}}
+    {{#if (noeq newPlateappearance.outcome "Hit")}}
     <option value='Hit'>Hit</option>
+    {{/if}}
+    {{#if (noeq newPlateappearance.outcome "Out")}}
     <option value='Out'>Out</option>
+    {{/if}}
   </select>
   <span class='form-label'>Runs:</span>
   {{input class='pa-input' type='number' value=newPlateappearance.runs required='true' min='0' max='4'}}
