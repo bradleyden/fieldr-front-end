@@ -6,7 +6,6 @@ export default Ember.Component.extend({
       this.get('plateappearance').set('outcome', outcome)
     },
     selectInningHalfEdit(inninghalf) {
-      console.log('currPA is',inninghalf)
       this.get('plateappearance').set('inninghalf', inninghalf)
     },
     editPlateappearance (plateappearance) {
