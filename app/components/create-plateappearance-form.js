@@ -27,17 +27,16 @@ export default Ember.Component.extend({
     homer: false
   },
   actions: {
-    selectInningHalf(inninghalf) {
-      console.log(inninghalf)
+    selectInningHalfCreate(inninghalf) {
+      console.log('newPA is',inninghalf)
       this.set('newPlateappearance.inninghalf', inninghalf)
     },
-    selectOutcome(outcome) {
+    selectOutcomeCreate(outcome) {
       this.set('newPlateappearance.outcome', outcome)
     },
     createPlateappearance() {
       this.sendAction('createPlateappearance', this.get('newPlateappearance'))
       this.set('newPlateappearance.batter', null)
-      this.set('newPlateappearance.outcome', 'No AB')
       this.set('newPlateappearance.runs', 0)
       this.set('newPlateappearance.outs', 0)
       this.set('newPlateappearance.def_error', 0)
