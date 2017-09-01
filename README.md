@@ -1,74 +1,49 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+[![Screenshot](https://raw.githubusercontent.com/bradleyden/fieldr-front-end/master/Fieldrscreenshot.png)
 
-# Authentication in Ember
+# Fieldr
 
-This training will involve a lot of following code and and exploring the
-Chrome Inspector and utilizing Ember Inspector.  It is recommended that you
-comment code or take notes.
+Welcome to Fieldr, a fullstack baseball scoring and data visualization application made by a fan, for fans.
 
-## Prerequisites
+## Links
 
--   [Ember Resources](https://github.com/ga-wdi-boston/ember-resources)
+-   [Deployed Client](https://bradleyden.github.io/fieldr-front-end)
+-   [Deployed API](https://serene-hollows-15808.herokuapp.com)
+-   [API Repo](https://github.com/bradleyden/fieldr-api)
 
-## Objectives
+## Technologies Used
 
-By the end of this, developers should be able to:
+Front-end:
+HTML/SCSS and Bootstrap
+JavaScript
+Ember
 
--   Implement token authentication in an Ember application.
--   Enforce authentication in protected routes.
+Back-end:
+Ruby on Rails
+PostgreSQL
 
-## Preparation
+## Planning
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-1.  Install dependencies with `npm install` and `bower install`.
-1.  Start any API based on a recent version of the [Rails API
-    Template](https://github.com/ga-wdi-boston/rails-api-template) or the
-    [Express API
-    Template](https://github.com/ga-wdi-boston/express-api-template).
-1.  Start the front-end server with `ember server`.
+-   [User Stories](https://drive.google.com/open?id=1TaBbTpUiw1MndNdx3hTswQ4vCjXgbcR6XQ)
+-   [Wireframes](https://drive.google.com/open?id=1huaFfyxumh8fKocIU63CaIr-OuNJuEa6FA)
 
-## From end to end
+## Process
 
-Watch as I sign up for a new account on our demo app.
+This project grew from a love for watching and following baseball, and a desire to bring the multitudes of different stats to life through visualization.
 
-*Other than the flash messages on the page, did anything change?  What about in
-the Chrome Developer Tools?*
+I began the process by trying to boil baseball down to the basic concepts that could be recreated with basic data entered by the user. It turns out baseball is much more complex than it may originally seem, so it was a challenge to conceptualize the data in a way that made it manageable in the time I had but still provided a complete product.
 
-Take some time and sign in on your own, and check to see if anything in the
-Chrome Dev Tools has changed.
+Once I had the data planned out and mapped, I began to build out my API for the initial resource, games, and a simple Ember front end to start the initial CRUD process. As I began to get this working, I expanded the data relationship to include plate appearances, and was able to get all of the data I needed to start mapping a visual UI.
 
-Now that we have added a key tool to our personal developer toolkit lets look
-at how it's implemented.
+## Installation Instructions
 
-## Follow Along
+- Fork and clone this repository
+- npm install
+- bower install
 
-Let's walk through file by file to see what's happening.  I will ask
-developers to guide me through the files while correcting any misunderstandings.
+## What's Next
 
-First let's start down the template and component trail, then we'll work our way
-up with actions.
-
-*Remember: Data down, actions up.*
-
-While going up the Ember hierarchy we may need to stop a some point to discuss
-services.
-
-## Additional Resources
-
--   [Implementing Authentication with Ember Services - Ember
-    Igniter](http://emberigniter.com/implementing-authentication-with-ember-services/)
--   [jpadilla/ember-simple-auth-token: Ember Simple Auth extension that is
-    compatible with token-based authentication like
-    JWT.](https://github.com/jpadilla/ember-simple-auth-token)
--   [simplabs/ember-simple-auth: A library for implementing
-    authentication/authorization in Ember.js
-    applications.](https://github.com/simplabs/ember-simple-auth)
--   [Create your first Ember 2.0 app: From authentication to calling an
-    API](https://auth0.com/blog/2015/08/11/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/)
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+While this project is a fantastic starting point, there is still much that I would like to incorporate into the application in the future. A few key elements that are at the top of my priority list are:
+  - Roster information, so that player numbers can be matched to names
+  - D3.js data visualization for each game
+  - More advanced stats, including defensive player and pitching stats
+  - Team color customization
