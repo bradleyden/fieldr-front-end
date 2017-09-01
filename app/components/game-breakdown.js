@@ -7,7 +7,6 @@ export default Ember.Component.extend({
       return this.sendAction('createPlateappearance', plateappearance)
     },
     deletePlateappearance (plateappearance) {
-      console.log(plateappearance)
       return this.sendAction('deletePlateappearance', plateappearance)
     }
   }

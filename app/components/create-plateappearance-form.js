@@ -28,7 +28,6 @@ export default Ember.Component.extend({
   },
   actions: {
     selectInningHalfCreate(inninghalf) {
-      console.log('newPA is',inninghalf)
       this.set('newPlateappearance.inninghalf', inninghalf)
     },
     selectOutcomeCreate(outcome) {
