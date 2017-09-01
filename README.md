@@ -1,4 +1,4 @@
-[![Screenshot](https://raw.githubusercontent.com/bradleyden/fieldr-front-end/master/Fieldrscreenshot.png)
+![Screenshot](https://raw.githubusercontent.com/bradleyden/fieldr-front-end/master/Fieldrscreenshot.png)
 
 # Fieldr
 
