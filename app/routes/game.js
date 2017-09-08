@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   afterModel: function(model, transition) {
     Ember.run.later((function() {
       transition.send('updateScores')
-    }), 500)
+    }), 1000)
   },
   actions: {
     updateScores() {
@@ -20,6 +20,7 @@ export default Ember.Route.extend({
       let homeHits = 0
       let awayErrors = 0
       let homeErrors = 0
+      let totalInnings = 1
       let topOne = 0
       let botOne = 0
       let topTwo = 0
@@ -38,8 +39,30 @@ export default Ember.Route.extend({
       let botEight = 0
       let topNine = 0
       let botNine = 0
+      let topTen = 0
+      let botTen = 0
+      let topEleven = 0
+      let botEleven = 0
+      let topTwelve = 0
+      let botTwelve = 0
+      let topThirteen = 0
+      let botThirteen = 0
+      let topFourteen = 0
+      let botFourteen = 0
+      let topFifteen = 0
+      let botFifteen = 0
+      let topSixteen = 0
+      let botSixteen = 0
+      let topSeventeen = 0
+      let botSeventeen = 0
+      let topEighteen = 0
+      let botEighteen = 0
       const plateappearanceArray = game.get('plateappearances').toArray()
       plateappearanceArray.forEach(function(item) {
+        if (item.data.inning > totalInnings) {
+          totalInnings = item.data.inning
+          console.log(totalInnings)
+        }
         if (item.data.inninghalf === 'TOP') {
           awayRuns += item.data.runs
           awayErrors += item.data.def_error
@@ -64,6 +87,24 @@ export default Ember.Route.extend({
             topEight += item.data.runs
           } else if (item.data.inning === 9) {
             topNine += item.data.runs
+          } else if (item.data.inning === 10) {
+            topTen += item.data.runs
+          } else if (item.data.inning === 11) {
+            topEleven += item.data.runs
+          } else if (item.data.inning === 12) {
+            topTwelve += item.data.runs
+          } else if (item.data.inning === 13) {
+            topThirteen += item.data.runs
+          } else if (item.data.inning === 14) {
+            topFourteen += item.data.runs
+          } else if (item.data.inning === 15) {
+            topFifteen += item.data.runs
+          } else if (item.data.inning === 16) {
+            topSixteen += item.data.runs
+          } else if (item.data.inning === 17) {
+            topSeventeen += item.data.runs
+          } else if (item.data.inning === 18) {
+            topEighteen += item.data.runs
           }
         } else if (item.data.inninghalf === 'BOT'){
           homeRuns += item.data.runs
@@ -89,6 +130,24 @@ export default Ember.Route.extend({
             botEight += item.data.runs
           } else if (item.data.inning === 9) {
             botNine += item.data.runs
+          } else if (item.data.inning === 10) {
+            botTen += item.data.runs
+          } else if (item.data.inning === 11) {
+            botEleven += item.data.runs
+          } else if (item.data.inning === 12) {
+            botTwelve += item.data.runs
+          } else if (item.data.inning === 13) {
+            botThirteen += item.data.runs
+          } else if (item.data.inning === 14) {
+            botFourteen += item.data.runs
+          } else if (item.data.inning === 15) {
+            botFifteen += item.data.runs
+          } else if (item.data.inning === 16) {
+            botSixteen += item.data.runs
+          } else if (item.data.inning === 17) {
+            botSeventeen += item.data.runs
+          } else if (item.data.inning === 18) {
+            botEighteen += item.data.runs
           }
         }
       })
@@ -116,6 +175,25 @@ export default Ember.Route.extend({
       game.set('botEight', botEight)
       game.set('topNine', topNine)
       game.set('botNine', botNine)
+      game.set('topTen', topTen)
+      game.set('botTen', botTen)
+      game.set('topEleven', topEleven)
+      game.set('botEleven', botEleven)
+      game.set('topTwelve', topTwelve)
+      game.set('botTwelve', botTwelve)
+      game.set('topThirteen', topThirteen)
+      game.set('botThirteen', botThirteen)
+      game.set('topFourteen', topFourteen)
+      game.set('botFourteen', botFourteen)
+      game.set('topFifteen', topFifteen)
+      game.set('botFifteen', botFifteen)
+      game.set('topSixteen', topSixteen)
+      game.set('botSixteen', botSixteen)
+      game.set('topSeventeen', topSeventeen)
+      game.set('botSeventeen', botSeventeen)
+      game.set('topEighteen', topEighteen)
+      game.set('botEighteen', botEighteen)
+      game.set('totalInnings', totalInnings)
     },
     createPlateappearance(plateappearance) {
       const scope = this
@@ -131,6 +209,16 @@ export default Ember.Route.extend({
       Ember.run.later((function() {
         scope.send('updateScores')
       }), 500)
+    },
+    createGame(game) {
+      // Ember.set(game, 'home', JSON.stringify(game.home))
+      // Ember.set(game, 'away', JSON.stringify(game.away))
+      let newGame = this.get('store').createRecord('game', game)
+      newGame.save()
+    },
+    deleteGame(game) {
+      game.destroyRecord()
+      this.transitionTo('games')
     }
   }
 });
