@@ -5,24 +5,5 @@
 {{#if (eq model.length 0)}}
 <p>No games to display! Create one now to get started.</p>
 {{else}}
-<table>
-  <thead>
-    <tr class='table-header'>
-      <th>
-        Date
-      </th>
-      <th>
-        Teams
-      </th>
-      <th>
-        Edit/Delete
-      </th>
-    </tr>
-  </thead>
-    <tbody>
-      {{#each model as |game|}}
-        {{game-list-item deleteGame='deleteGame' game=game}}
-      {{/each}}
-    </tbody>
-</table>
+{{games-table data=model}}
 {{/if}}

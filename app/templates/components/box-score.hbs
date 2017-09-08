@@ -10,6 +10,33 @@
     <th>7</th>
     <th>8</th>
     <th>9</th>
+    {{#if (grthan game.totalInnings 9)}}
+    <th>10</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 10)}}
+    <th>11</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 11)}}
+    <th>12</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 12)}}
+    <th>13</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 13)}}
+    <th>14</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 14)}}
+    <th>15</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 15)}}
+    <th>16</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 16)}}
+    <th>17</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 17)}}
+    <th>18</th>
+    {{/if}}
     <th>R</th>
     <th>H</th>
     <th>E</th>
@@ -25,6 +52,33 @@
     <th>{{game.topSeven}}</th>
     <th>{{game.topEight}}</th>
     <th>{{game.topNine}}</th>
+    {{#if (grthan game.totalInnings 9)}}
+    <th>{{game.topTen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 10)}}
+    <th>{{game.topEleven}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 11)}}
+    <th>{{game.topTwelve}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 12)}}
+    <th>{{game.topThirteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 13)}}
+    <th>{{game.topFourteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 14)}}
+    <th>{{game.topFifteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 15)}}
+    <th>{{game.topSixteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 16)}}
+    <th>{{game.topSeventeen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 17)}}
+    <th>{{game.topEighteen}}</th>
+    {{/if}}
     <th class='RHE'>{{game.awayRuns}}</th>
     <th class='RHE'>{{game.awayHits}}</th>
     <th class='RHE'>{{game.homeErrors}}</th>
@@ -40,6 +94,33 @@
     <th>{{game.botSeven}}</th>
     <th>{{game.botEight}}</th>
     <th>{{game.botNine}}</th>
+    {{#if (grthan game.totalInnings 9)}}
+    <th>{{game.botTen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 10)}}
+    <th>{{game.botEleven}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 11)}}
+    <th>{{game.botTwelve}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 12)}}
+    <th>{{game.botThirteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 13)}}
+    <th>{{game.botFourteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 14)}}
+    <th>{{game.botFifteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 15)}}
+    <th>{{game.botSixteen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 16)}}
+    <th>{{game.botSeventeen}}</th>
+    {{/if}}
+    {{#if (grthan game.totalInnings 17)}}
+    <th>{{game.botEighteen}}</th>
+    {{/if}}
     <th class='RHE'>{{game.homeRuns}}</th>
     <th class='RHE'>{{game.homeHits}}</th>
     <th class='RHE'>{{game.awayErrors}}</th>

@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'pikaday-theme';
 
 svg {
   width: 600px;
@@ -97,8 +98,13 @@ h1, h2, h3 {
 }
 
 table {
-  width: 90%;
+  width: 100%;
   border: 2px solid #273f33;
+  margin-bottom: 100px;
+}
+
+.changePageSize {
+  margin-bottom: 150px;
 }
 
 th,
@@ -107,6 +113,12 @@ td {
   text-align: center;
   border: 2px solid #273f33;
   padding: 15px;
+}
+
+td {
+  font-size: 32px;
+  color: #273f33;
+  font-family: 'Oswald';
 }
 
 .RHE {
@@ -190,6 +202,7 @@ td {
   bottom: 0;
   padding: 20px;
   text-align: left;
+  z-index: 3;
 }
 
 .newPA {
@@ -277,6 +290,10 @@ td {
   position:absolute;
   top:0;left:0;
   z-index: 0;
+}
+
+td {
+  font-size: 30px;
 }
 
 .jumbotron h2,
