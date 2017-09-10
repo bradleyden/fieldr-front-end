@@ -1,6 +1,6 @@
 <h3>Create a new game</h3>
 <form {{action 'createGame' on='submit'}} >
-  {{pikaday-input readonly="readonly" placeholder='Date' class='longer-field ember-text-field form-control' theme="dark-theme" onSelection=(action 'updateDate') format="YYYY-MM-DD"}}
+  {{pikaday-input yearRange="1900,2020" readonly="readonly" placeholder='Date' class='longer-field ember-text-field form-control' theme="dark-theme" onSelection=(action 'updateDate') format="YYYY-MM-DD"}}
   {{input class='longer-field' placeholder='Home Team' value=newGame.home required='true'}}
   {{input class='longer-field' placeholder='Away Team' value=newGame.away required='true'}}
   <button class='btn' type='submit'><i class="fa fa-plus" aria-hidden="true"></i></button>
