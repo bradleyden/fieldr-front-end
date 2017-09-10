@@ -1,0 +1,21 @@
+{{#link-to 'game' model.id}}<button class='btn'><i class="fa fa-arrow-left" aria-hidden="true"></i></button>{{/link-to}}
+
+
+<div class='charts'>
+  <div class='radar-chart'>
+  <h1>Runs Scored by Inning:</h1><br>
+  {{radar-chart data=model.radarChart}}
+  </div>
+
+  <div class='donut-charts'>
+    <h1>Team Breakdown:</h1><br>
+    <h2>{{model.home}}</h2>
+    <div class='donut-chart'>
+    {{donut-chart data=model.donutChartHome}}
+    </div>
+    <h2>{{model.away}}</h2>
+    <div class='donut-chart'>
+    {{donut-chart data=model.donutChartAway}}
+    </div>
+  </div>
+</div>

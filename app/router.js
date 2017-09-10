@@ -17,6 +17,7 @@ Router.map(function () {
   this.route('plateappearance-edit', { path: '/games/:game_id/plateappearances/:plateappearance_id' });
   this.route('help');
   this.route('delete-confirm', { path: '/games/:game_id/delete' });
+  this.route('game-charts', { path: '/games/:game_id/chart' });
 });
 
 export default Router;

@@ -59,6 +59,7 @@
     "time-grunt": "^1.4.0"
   },
   "dependencies": {
+    "ember-cli-chart": "^3.3.2",
     "ember-daypicker": "^0.6.0",
     "ember-flatpickr": "^2.0.3",
     "ember-models-table": "^1.13.0",
