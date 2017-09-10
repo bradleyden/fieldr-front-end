@@ -10,6 +10,10 @@
   <button class='btn'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
 {{/link-to}}
 
+
+<button class='btn' {{action 'transitionToChart' model}}><i class="fa fa-bar-chart" aria-hidden="true"></i></button>
+
+
 {{box-score game=model}}
 
 {{game-breakdown

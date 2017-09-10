@@ -9,11 +9,13 @@ export default Ember.Component.extend({
   },
   {
     "propertyName": "home",
-    "title": "Home Team"
+    "title": "Home Team",
+    "routeName": "game"
   },
   {
     "propertyName": "away",
-    "title": "Away Team"
+    "title": "Away Team",
+    "routeName": "game"
   }
 ],
 icons: Ember.Object.create({
