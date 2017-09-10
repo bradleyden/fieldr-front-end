@@ -214,10 +214,10 @@ export default Ember.Route.extend({
       }), 500)
     },
     createGame(game) {
-      // Ember.set(game, 'home', JSON.stringify(game.home))
-      // Ember.set(game, 'away', JSON.stringify(game.away))
-      let newGame = this.get('store').createRecord('game', game)
-      newGame.save()
+      if (game.date) {
+        let newGame = this.get('store').createRecord('game', game)
+        newGame.save()
+      }
     },
     deleteGame(game) {
       game.destroyRecord()

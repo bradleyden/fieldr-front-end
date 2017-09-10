@@ -1,6 +1,6 @@
 <h3>Edit game information</h3>
 <form {{action 'updateGame' on='submit'}} >
-  {{pikaday-input readonly="readonly" placeholder='New Date' class='longer-field ember-text-field form-control' theme="dark-theme" onSelection=(action 'updateDate') format="YYYY-MM-DD"}}
+  {{pikaday-input readonly="readonly" placeholder='New Date' class='longer-field ember-text-field form-control' theme="dark-theme" onSelection=(action 'updateDate') yearRange="1900,2020" format="YYYY-MM-DD"}}
   {{input placeholder='Home Team' value=game.home required='true'}}
   {{input placeholder='Away Team' value=game.away required='true'}}
   <button class='btn' type='submit'>Save</button>
