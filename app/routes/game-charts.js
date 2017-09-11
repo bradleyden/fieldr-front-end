@@ -1,9 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // custom model returns an object in the format expected by the chart.js chart
+  // types. game data is plugged into the values using a resolved findRecord
+  // promise.
   model (params) {
     const currentGame = this.get('store').findRecord('game', params.game_id);
     return currentGame.then(function() {
+      // if statement is just to add additional labels and values to the radar-chart
+      // in the event of extra innings.
       if (currentGame.get('totalInnings') <= 9) {
         return {
           home: currentGame.get('home'),

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  // options for the radar chart component from chart.js
   options: {
     animation: {
       easing: 'easeOutBack',
