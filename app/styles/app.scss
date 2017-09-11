@@ -61,6 +61,14 @@ h1, h2, h3 {
   color: #273f33;
 }
 
+.greeting {
+  text-align: right;
+  margin: 15px;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: white;
+}
+
 .logo {
   position: absolute;
   margin-top: -31px;
@@ -333,6 +341,10 @@ td {
 .navbar .navbar-nav > li > a:hover {
   background-color: #273f33;
   color: #e0d0b2;
+}
+
+.nav-link-right {
+  margin-top: -70px;
 }
 
 .jumbo-container {
