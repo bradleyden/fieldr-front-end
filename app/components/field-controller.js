@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  // toggles the boolean values of each position/base when a user clicks the svg
+  // object on the field graphic. This boolean value determines the object's class,
+  // which determines its styling.
   actions: {
     toggleFirstbase() {
       this.plateappearance.toggleProperty('firstbase')
@@ -32,14 +35,14 @@ export default Ember.Component.extend({
     toggleShortstopdefense() {
       this.plateappearance.toggleProperty('shortstopdefense')
     },
-    toggleLeftfielderdefense() {
-      this.plateappearance.toggleProperty('leftfielderdefense')
+    toggleleftfielddefense() {
+      this.plateappearance.toggleProperty('leftfielddefense')
     },
-    toggleCenterfielderdefense() {
-      this.plateappearance.toggleProperty('centerfielderdefense')
+    togglecenterfielddefense() {
+      this.plateappearance.toggleProperty('centerfielddefense')
     },
-    toggleRightfielderdefense() {
-      this.plateappearance.toggleProperty('rightfielderdefense')
+    togglerightfielddefense() {
+      this.plateappearance.toggleProperty('rightfielddefense')
     },
     toggleHomer() {
       this.plateappearance.toggleProperty('homer')

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  // new plate appearance object, with all metadata set to default values
   newPlateappearance: {
     inninghalf: 'TOP',
     inning: 1,
@@ -27,12 +28,17 @@ export default Ember.Component.extend({
     homer: false
   },
   actions: {
+    // changes the value of inning half when a user clicks a new value from the
+    // dropdown on the form.
     selectInningHalfCreate(inninghalf) {
       this.set('newPlateappearance.inninghalf', inninghalf)
     },
+    // changes the value of outcome when a user clicks a new value from the form
     selectOutcomeCreate(outcome) {
       this.set('newPlateappearance.outcome', outcome)
     },
+    // creates a new plate appearance based on the above object, modified with
+    // the values of the form fields. Then it resets certain values to default.
     createPlateappearance() {
       this.sendAction('createPlateappearance', this.get('newPlateappearance'))
       this.set('newPlateappearance.batter', null)

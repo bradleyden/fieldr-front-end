@@ -6,12 +6,20 @@ export default Ember.Route.extend({
     this.set('currentGame', currentGame)
     return currentGame
   },
-  afterModel: function(model, transition) {
-    Ember.run.later((function() {
-      transition.send('updateScores')
-    }), 1000)
-  },
+  // every time the model loads, it will run the update scores function after
+  // a slight delay.
+  // afterModel: function(model, transition) {
+  //   Ember.run.later((function() {
+  //     transition.send('updateScores')
+  //   }), 2000)
+  // },
   actions: {
+    // This is a large function, but fairly simple: every time it is run it
+    // loops through every plate appearance associated with the current game
+    // and keeps a tally of runs per inning and total runs/hits/errors for
+    // each team, and appends these values to the game object and issues a
+    // put request. It essentially is what allows all of this data to be updated
+    // dynamically without users needing to enter it all in manually.
     updateScores() {
       const game = this.get('currentGame')
       let awayRuns = 0
@@ -58,6 +66,7 @@ export default Ember.Route.extend({
       let topEighteen = 0
       let botEighteen = 0
       const plateappearanceArray = game.get('plateappearances').toArray()
+      console.log(plateappearanceArray)
       plateappearanceArray.forEach(function(item) {
         if (item.data.inning > totalInnings) {
           totalInnings = item.data.inning

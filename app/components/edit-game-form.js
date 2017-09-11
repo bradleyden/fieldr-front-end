@@ -1,10 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  // object to store the updated date when a game is edited
   updatedGame: {
     date: null
   },
   actions: {
+    // this function formats the date object from the pikaday input into a
+    // string and then stores the date value in the object above.
     updateDate(date) {
       const formatMonth = function (input) {
         let month = '' + (input.getMonth() + 1)
@@ -28,6 +31,8 @@ export default Ember.Component.extend({
       console.log(dateFormated)
       this.set('updatedGame.date', dateFormated)
     },
+    // if a new date was selected from pikaday, it will plug the new date value
+    // into the date object. Then it will update the game based on the form fields.
     updateGame(game) {
       if (this.get('updatedGame.date')) {
         this.set('game.date', this.get('updatedGame.date'))

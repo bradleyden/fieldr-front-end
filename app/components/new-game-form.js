@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  // new game object with all metadata set to default values for when game is
+  // initialized
   newGame: {
     date: null,
     home: null,
@@ -50,6 +52,8 @@ export default Ember.Component.extend({
     botEighteen: 0
   },
   actions: {
+    // converts date object from pikaday input to string, and then creates
+    // a game when the new game form is submitted
     updateDate(date) {
       const formatMonth = function (input) {
         let month = '' + (input.getMonth() + 1)
