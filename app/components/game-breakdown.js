@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   sortDefinition: ['id'],
   actions: {
     createPlateappearance (plateappearance) {
-      console.log(plateappearance.id)
       plateappearance.game = this.get('game')
       return this.sendAction('createPlateappearance', plateappearance)
     },
