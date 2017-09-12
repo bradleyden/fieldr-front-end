@@ -28,7 +28,6 @@ export default Ember.Component.extend({
         }
       }
       const dateFormated = '' + date.getFullYear() + '-' + formatMonth(date) + '-' + formatDay(date)
-      console.log(dateFormated)
       this.set('updatedGame.date', dateFormated)
     },
     // if a new date was selected from pikaday, it will plug the new date value

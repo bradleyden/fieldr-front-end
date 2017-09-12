@@ -75,7 +75,6 @@ export default Ember.Component.extend({
       }
       const dateFormated = '' + date.getFullYear() + '-' + formatMonth(date) + '-' + formatDay(date)
       this.set('newGame.date', dateFormated)
-      console.log(this.get('newGame.date'))
     },
     createGame() {
       this.sendAction('createGame', this.get('newGame'))

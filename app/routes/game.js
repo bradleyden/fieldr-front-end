@@ -6,13 +6,6 @@ export default Ember.Route.extend({
     this.set('currentGame', currentGame)
     return currentGame
   },
-  // every time the model loads, it will run the update scores function after
-  // a slight delay.
-  // afterModel: function(model, transition) {
-  //   Ember.run.later((function() {
-  //     transition.send('updateScores')
-  //   }), 2000)
-  // },
   actions: {
     // This is a large function, but fairly simple: every time it is run it
     // loops through every plate appearance associated with the current game
@@ -66,11 +59,9 @@ export default Ember.Route.extend({
       let topEighteen = 0
       let botEighteen = 0
       const plateappearanceArray = game.get('plateappearances').toArray()
-      console.log(plateappearanceArray)
       plateappearanceArray.forEach(function(item) {
         if (item.data.inning > totalInnings) {
           totalInnings = item.data.inning
-          console.log(totalInnings)
         }
         if (item.data.inninghalf === 'TOP') {
           awayRuns += item.data.runs
