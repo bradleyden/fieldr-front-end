@@ -8,7 +8,7 @@
   <tr>
     <th class='inning-column'>▲1</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 1)(eq plateappearance.inninghalf 'TOP'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -22,7 +22,7 @@
   <tr>
     <th class='inning-column'>1▼</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 1)(eq plateappearance.inninghalf 'BOT'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -37,7 +37,7 @@
   <tr>
     <th class='inning-column'>▲2</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 2)(eq plateappearance.inninghalf 'TOP'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -51,7 +51,7 @@
   <tr>
     <th class='inning-column'>2▼</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 2)(eq plateappearance.inninghalf 'BOT'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -67,7 +67,7 @@
   <tr>
     <th class='inning-column'>▲3</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 3)(eq plateappearance.inninghalf 'TOP'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -81,7 +81,7 @@
   <tr>
     <th class='inning-column'>3▼</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 3)(eq plateappearance.inninghalf 'BOT'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -97,7 +97,7 @@
   <tr>
     <th class='inning-column'>▲4</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 4)(eq plateappearance.inninghalf 'TOP'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -111,7 +111,7 @@
   <tr>
     <th class='inning-column'>4▼</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 4)(eq plateappearance.inninghalf 'BOT'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -127,7 +127,7 @@
   <tr>
     <th class='inning-column'>▲5</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 5)(eq plateappearance.inninghalf 'TOP'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -141,7 +141,7 @@
   <tr>
     <th class='inning-column'>5▼</th>
     <th class='plateappearance-cell'>
-      {{#each game.plateappearances as |plateappearance|}}
+      {{#each sortedPlateappearances as |plateappearance|}}
       {{#if (and (eq plateappearance.inning 5)(eq plateappearance.inninghalf 'BOT'))}}
         <div class='pabox'>
         {{plateappearance-box
@@ -157,7 +157,7 @@
 <tr>
   <th class='inning-column'>▲6</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 6)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -171,7 +171,7 @@
 <tr>
   <th class='inning-column'>6▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 6)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -187,7 +187,7 @@
 <tr>
   <th class='inning-column'>▲7</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 7)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -201,7 +201,7 @@
 <tr>
   <th class='inning-column'>7▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 7)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -217,7 +217,7 @@
 <tr>
   <th class='inning-column'>▲8</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 8)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -231,7 +231,7 @@
 <tr>
   <th class='inning-column'>8▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 8)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -247,7 +247,7 @@
 <tr>
   <th class='inning-column'>▲9</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 9)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -261,7 +261,7 @@
 <tr>
   <th class='inning-column'>9▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 9)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -277,7 +277,7 @@
 <tr>
   <th class='inning-column'>▲10</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 10)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -291,7 +291,7 @@
 <tr>
   <th class='inning-column'>10▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 10)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -307,7 +307,7 @@
 <tr>
   <th class='inning-column'>▲11</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 11)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -321,7 +321,7 @@
 <tr>
   <th class='inning-column'>11▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 11)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -337,7 +337,7 @@
 <tr>
   <th class='inning-column'>▲12</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 12)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -351,7 +351,7 @@
 <tr>
   <th class='inning-column'>12▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 12)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -367,7 +367,7 @@
 <tr>
   <th class='inning-column'>▲13</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 13)(eq plateappearance.inninghalf 'TOP'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -381,7 +381,7 @@
 <tr>
   <th class='inning-column'>13▼</th>
   <th class='plateappearance-cell'>
-    {{#each game.plateappearances as |plateappearance|}}
+    {{#each sortedPlateappearances as |plateappearance|}}
     {{#if (and (eq plateappearance.inning 13)(eq plateappearance.inninghalf 'BOT'))}}
       <div class='pabox'>
       {{plateappearance-box
@@ -397,7 +397,7 @@
 <tr>
 <th class='inning-column'>▲14</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 14)(eq plateappearance.inninghalf 'TOP'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -411,7 +411,7 @@
 <tr>
 <th class='inning-column'>14▼</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 14)(eq plateappearance.inninghalf 'BOT'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -427,7 +427,7 @@
 <tr>
 <th class='inning-column'>▲15</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 15)(eq plateappearance.inninghalf 'TOP'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -441,7 +441,7 @@
 <tr>
 <th class='inning-column'>15▼</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 15)(eq plateappearance.inninghalf 'BOT'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -457,7 +457,7 @@
 <tr>
 <th class='inning-column'>▲16</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 16)(eq plateappearance.inninghalf 'TOP'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -471,7 +471,7 @@
 <tr>
 <th class='inning-column'>16▼</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 16)(eq plateappearance.inninghalf 'BOT'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -487,7 +487,7 @@
 <tr>
 <th class='inning-column'>▲17</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 17)(eq plateappearance.inninghalf 'TOP'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -501,7 +501,7 @@
 <tr>
 <th class='inning-column'>17▼</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 17)(eq plateappearance.inninghalf 'BOT'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -517,7 +517,7 @@
 <tr>
 <th class='inning-column'>▲18</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 18)(eq plateappearance.inninghalf 'TOP'))}}
     <div class='pabox'>
     {{plateappearance-box
@@ -531,7 +531,7 @@
 <tr>
 <th class='inning-column'>18▼</th>
 <th class='plateappearance-cell'>
-  {{#each game.plateappearances as |plateappearance|}}
+  {{#each sortedPlateappearances as |plateappearance|}}
   {{#if (and (eq plateappearance.inning 18)(eq plateappearance.inninghalf 'BOT'))}}
     <div class='pabox'>
     {{plateappearance-box
