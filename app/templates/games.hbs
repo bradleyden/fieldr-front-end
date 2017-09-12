@@ -1,9 +1,0 @@
-<h2>Games</h2>
-
-{{new-game-form createGame="createGame"}}<br>
-
-{{#if (eq model.length 0)}}
-<p>No games to display! Create one now to get started.</p>
-{{else}}
-{{games-table data=model}}
-{{/if}}
